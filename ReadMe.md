@@ -1,8 +1,8 @@
 This repository includes R scripts to simulate datasets, fit models (LMMs and PLMMs), and plot the results. It also includes R functions to do bootstrapping on PLMMs and examples about how to use it.
 
-The code comes with no guaranntees and all questions should be directed to Daijiang Li (daijianglee@gmail.com).
+Theses scripts are under MIT license and come with no guaranntees. Please cite the paper if you use the code elsewhere.
 
-Please cite the paper if you use the code elsewhere.
+All questions should be directed to Daijiang Li (daijianglee@gmail.com).
 
 - `Rcode` folder: all R codes used.
     + `simulation.R`: simulates datasets, fits models (LMMs and PLMMs), and saves results.
