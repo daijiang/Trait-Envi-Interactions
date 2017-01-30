@@ -30,3 +30,26 @@ All questions should be directed to Daijiang Li (daijianglee@gmail.com).
          [1] Rcpp_0.12.8      digest_0.6.10    assertthat_0.1   MASS_7.3-45      grid_3.3.2       R6_2.2.0         gtable_0.2.0     DBI_0.5          magrittr_1.5    
         [10] scales_0.4.1     stringi_1.1.1    reshape2_1.4.1   lazyeval_0.2.0   labeling_0.3     tools_3.3.2      stringr_1.1.0    munsell_0.4.3    colorspace_1.2-6
         [19] gridExtra_2.2.1  tibble_1.2
+
+
+MIT License
+
+Copyright (c) [2017] [Daijiang Li]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
