@@ -4,13 +4,14 @@ Theses scripts are under MIT license and come with no guaranntees. Please cite t
 
 All questions should be directed to Daijiang Li (daijianglee@gmail.com).
 
-- `Rcode` folder: all R codes used.
+- `Rcode` folder: all R codes used in the main text.
     + `simulation.R`: simulates datasets, fits models (LMMs and PLMMs), and saves results.
     + `plot.R`: plot the results, reproduce all figures from the paper.
     + `bootstrap_plmm_mc.R`: do bootstrapping on PLMMs, with multiple cores as an option.
 - `rds` folder: model fitting results from LMMs and PLMMs with varing number of species (i.e. Type I errors).
 - `rds2` folder: model fitting results from LMMs and PLMMs with varing true parameters (i.e. Type II errors).
 - `rds_bootstrap` folder: results of bootstrapping on PLMMs.
+- `appendixS1` folder: R code and data to show that they way to simulate the phylogeny does not affect our results and conclusions. The R codes are mostly the same as those in the main text, with their ways to simulate phylogeny changed.
 
         `sessionInfo()`
         R version 3.3.2 (2016-10-31)
