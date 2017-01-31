@@ -1,23 +1,12 @@
 ---
-title: 'Responses to reviewers: figures'
+title: 'The way to simulate phylogenies does not affect results'
 author: "Daijiang Li, Anthony Ives"
 date: '`r format(Sys.time(), "%d %B, %Y")`'
 output:
-  bookdown::html_document2:
+  html_document:
     code_folding: hide
     number_sections: no
     theme: readable
-    toc: yes
-  bookdown::pdf_document2:
-    includes:
-      in_header: preamble.tex
-    keep_tex: yes
-    latex_engine: xelatex
-    number_sections: no
-    toc: no
-  bookdown::tufte_html2:
-    code_folding: hide
-    number_sections: no
     toc: yes
 ---
 
@@ -29,16 +18,16 @@ knitr::opts_chunk(fig.align = 'center', warning = F, message = F)
 
 To respond to reviewer 2's major comment about how the topology of the phylogenies will affect the results and conclusions of our manuscript, we have 
 
-1. re-done all analyses with symmetrical balanced phylogenies;
-2. compared type I errors of LMM and PLMM when phylogenies were simulated with simple birth-death model but with different death rates.
+1. re-done all analyses with symmetrical, balanced phylogenies;
+2. compared type I errors of LMMs and PLMMs when phylogenies were simulated with a simple birth-death model but with different death rates.
 
 Overall, the results are very similar to those from the manuscript. Therefore, the phylogenies do not affect our results and conclusions.
 
 # Re-do all analyses
 
-We have re-done all analyses with symmetrical balanced phylogenies, using the `ape::stree(n = nspp, type = "balanced")` R function. Instead of simulating 1000 datasets for each combination of `nspp`, `beta_5`, and `trait1: I/C, trait2: I/C`, we only simulated 200 datasets for each combination of `nspp = c(16, 32, 64)`, `beta_5 = c(0, 0.5, 1)`, and the same traits conditions.
+We have re-done all analyses with symmetrical, balanced phylogenies, using the `ape::stree(n = nspp, type = "balanced")` R function. Instead of simulating 1000 datasets for each combination of `nspp`, `beta_5`, and `trait1: I/C, trait2: I/C`, we only simulated 200 datasets for each combination of `nspp = c(16, 32, 64)`, `beta_5 = c(0, 0.5, 1)`, and the same traits conditions.
 
-Here are the figures resulted from simulations with balanced phylogenies. They show the same pattern as those in the manuscript.  
+Here are the figures resulted from simulations with balanced phylogenies. They show the same patterns as those in the manuscript.  
 
 ```{r code1, message=FALSE, warning=FALSE}
 library(plyr)
@@ -345,7 +334,7 @@ plot_grid(type_1_plot, type_2_plot, labels = c("(A)", "(B)"))
 
 ## Figure 4
 
-```{r fig4, fig.width=8, fig.asp=0.55}
+```{r fig4, fig.width=8, fig.asp=0.5}
 est_se_plt(nsp = 32, alpha = 0.8, trait2_C = T, text1_x = 1.263, text2_x = 1.25, text1_y = 0.08)
 ```
 
@@ -366,13 +355,13 @@ ggplot(type_errs2,
 
 ### Figure A2
 
-```{r figa2, fig.width=8, fig.asp=0.55}
+```{r figa2, fig.width=8, fig.asp=0.5}
 est_se_plt(nsp = 32, alpha = 0.8, trait2_C = F, text1_x = 0.886, text2_x = 0.88, text1_y = 0.075)
 ```
 
 # Varing death rates of phylogenies
 
-We have conducted simulations with different extinction rates (`death_rate = c(0.1, 0.3, 0.5, 0.7)`) and different number of species (`nspp = c(20, 40, 60)`) in the simple birth-death model. For each extinction rate and number of species combination, we conducted 200 simulations with `nsite = 30` and `trait1: C; trait2: C`. We then compared type I errors of LMM and PLMM, which is the most important information in the manuscript. We found that the extinction rates do not affect our conclusions.
+We have conducted simulations with different extinction rates (`death_rate = c(0.1, 0.3, 0.5, 0.7)`) and different number of species (`nspp = c(20, 40, 60)`) in the simple birth-death model. For each extinction rate and number of species combination, we conducted 200 simulations with `nsite = 30` and `trait1: C; trait2: C`. We then compared type I errors of LMMs and PLMMs, which is the most important information in the manuscript. We found that the extinction rates do not affect our conclusions.
 
 ```{r type1, fig.width=8, fig.asp=0.8}
 test1 = bind_rows(
