@@ -138,6 +138,15 @@ type_errs2$models[type_errs2$models == "no_phylo"] = "LMM"
 type_errs2$models[type_errs2$models == "phylo"] = "PLMM"
 
 # function to plot fig. 4 ----
+#' nsp: number of species in the simulation
+#' nitem: how many simulations to plot?
+#' alpha: transparency
+#' trim: only plot trait1: I; trait2: C and trait1: C; trait2: C
+#' trait2_C: only plot trait2: C?
+#' text1_x: location of LMM text
+#' text1_y: location of LMM text
+#' text2_x: location of PLMM text
+#' text2_y: location of PLMM text
 est_se_plt = function(nsp = c(50, 20, 40, 60, 80), nitem = NULL, alpha = 1, 
                       trim = FALSE, trait2_C = TRUE, text1_x = 0.765, text2_x = 0.75,
                       text1_y = 0.07, text2_y = 0.05){
